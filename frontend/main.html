@@ -2,7 +2,7 @@
 <head>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body style="background-color: black; color: green;">
+<body style="background-color: black; color: green; flex: auto; justify-items: center;">
     <h1 x-data="{ message: 'I love Alpine' }" x-text="message"></h1>
     <div x-data="{ count: 0 }">
         <button x-on:mouseenter="count++">Increment</button>
@@ -31,10 +31,10 @@
             <button @click="total += 8">8</button>
             <button @click="total += 9">9</button>
             <br />
-            <div style="margin-top: 10px;">
+            <div style="padding-left: 10px;">
                 Сумма: <span x-text="total"></span>
             </div>
-            <button @click="total = 0" style="color: red;">Сброс</button>
+            <button @click="total = 0" style="color: red; margin-left: 10px;">Сброс</button>
         </div>
     </div>
 </body>
