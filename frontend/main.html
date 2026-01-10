@@ -37,5 +37,12 @@
             <button @click="total = 0" style="color: red; margin-left: 10px;">Сброс</button>
         </div>
     </div>
+
+    <div x-data="{ seconds: 0, interval: null }" style="font-family: 'Courier New', Courier, monospace;">
+        <span style="font-size: 50px;">Таймер</span>
+        <button @click="interval = setInterval(() => seconds++, 1000)" style="background-color: black; color: green;">Start</button>
+        <button @click="clearInterval(interval)" style="background-color: black; color: green;">Stop</button>
+        <span x-text="seconds" style="font-size: 40px;"></span>
+    </div>
 </body>
 </html>
