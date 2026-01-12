@@ -1,0 +1,50 @@
+.arch-body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+.arch-text {
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(23, 147, 209, 0.5);
+}
+
+
+.div-border {
+    border: 1px solid green;
+    padding: 30px;
+    border-radius: 12px;
+    background: #0a0a0a;
+    width: 350px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    color: green;
+}
+
+.btn-arch {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+}

@@ -1,48 +1,30 @@
 <html>
 <head>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="fonts.googleapis.com" rel="stylesheet">
 </head>
-<body style="background-color: black; color: green; flex: auto; justify-items: center;">
-    <h1 x-data="{ message: 'I love Alpine' }" x-text="message"></h1>
-    <div x-data="{ count: 0 }">
-        <button x-on:mouseenter="count++">Increment</button>
+<body class="arch-body">
+    <div class="center-wrapper">
+        <span class="arch-text">FastAPI - Quzcraft</span>
 
-        <span x-text="count"></span>
-    </div>
+        <div class="div-border">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label>Your name:</label>
+                    <input type="text" placeholder="arch-user" />
+                </div>
+                
+                <div class="form-group">
+                    <label>Your email:</label>
+                    <input type="email" placeholder="root@localhost" />
+                </div>
 
-    <div x-data="{ flag: false }">
-        <button x-on:click="flag = ! flag">Toggle</button>
-
-        <div x-show="flag" @click.outside="flag = false">Contents</div>
-    </div>
-
-    <div style="margin-top: 50px;" x-data="{ total: 0 }">
-        <span style="font-size: xx-large;">Calculartor:</span>
-        <div style="padding: 10px; margin: 10px;">
-            <button @click="total += 1">1</button>
-            <button @click="total += 2">2</button>
-            <button @click="total += 3">3</button>
-            <br />
-            <button @click="total += 4">4</button>
-            <button @click="total += 5">5</button>
-            <button @click="total += 6">6</button>
-            <br />
-            <button @click="total += 7">7</button>
-            <button @click="total += 8">8</button>
-            <button @click="total += 9">9</button>
-            <br />
-            <div style="padding-left: 10px;">
-                Сумма: <span x-text="total"></span>
-            </div>
-            <button @click="total = 0" style="color: red; margin-left: 10px;">Сброс</button>
+                <button type="submit" class="btn-arch">Run</button>
+            </form>
         </div>
-    </div>
-
-    <div x-data="{ seconds: 0, interval: null }" style="font-family: 'Courier New', Courier, monospace;">
-        <span style="font-size: 50px;">Таймер</span>
-        <button @click="interval = setInterval(() => seconds++, 1000)" style="background-color: black; color: green;">Start</button>
-        <button @click="clearInterval(interval)" style="background-color: black; color: green;">Stop</button>
-        <span x-text="seconds" style="font-size: 40px;"></span>
     </div>
 </body>
 </html>
